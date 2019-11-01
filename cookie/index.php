@@ -1,19 +1,13 @@
 <?php
-    session_start();
-
-    if(isset($_SESSION['sesion1'])) {
-        echo "Bienvenido: " . $_SESSION['sesion1'] . "<br>";
+    if(isset($_COOKIE['nombreUsuario'])) {
+        echo "Bienvenido usuario : " . $_COOKIE['nombreUsuario'] . " porque usas cookies?";
+        echo "<br> ". "puedo ver tu contraseña".$_COOKIE['password'];
     }
-    
+
     else {
-        echo "Aun no inicio sesion";
-    }   
-
+        echo "no hay cookie iniciada ";
+    }
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,16 +17,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="login.php" method = "post">
+    <form action="login_cookie.php" method = "post">
         Usuario<input type="text" name = "nombre"> <br>
-
-        Contra<input type="password" name = "contra"> <br>
-
+        Contraseña<input type="password" name = "contra"> <br>
         <input type="submit" value = "Ingresar">
     </form>
-    <form action="cerrar.php" method = "post">
+
+    <form action="cerrar_cookie.php" method = "post">
         <input type="submit" value = "Cerrar Sesion">
     </form>
 </body>
-
 </html>

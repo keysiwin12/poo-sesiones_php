@@ -6,13 +6,14 @@
     session_start();
     
     if($_POST['nombre'] == $user && $_POST['contra'] == $pass) {
-        $_SESSION ['sesion1'] = 'Administrador';
+        $_SESSION ['sesion1'] = 'Keysi';
         echo "Sesion iniciada";
     }
 
     else {
         echo "usuario o contra incorrecta";
     }
+
 
 
 
