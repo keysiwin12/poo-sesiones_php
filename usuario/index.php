@@ -30,14 +30,14 @@
             </label>
              
             <label for="contra">
-                contra: <input type="password" name = "contrasenia" id = "contra"> <br>               
+                Contra: <input type="password" name = "contrasenia" id = "contra"> <br>               
             </label>     
-            <input type="submit" value = "Iniciar Sesion">         
+            <input type="submit" value = "Iniciar Sesion" class = "boton">         
         </form>
 
         <form action="crear_usuario.php" method = "post">
             
-            <input type="submit" value = "Crear Cuenta">
+            <input type="submit" value = "Crear Cuenta" class = "boton">
         </form>
     </div>
 

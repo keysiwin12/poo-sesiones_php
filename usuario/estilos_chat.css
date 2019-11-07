@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+p{
+    text-align: center;
+}
+.chat {
+    background-color: teal;
+    width: 400px;
+}
+
+.boton {
+    border-color: black;
+    font-size: 20px;
+    color : white;
+    background-color: black;
+}
