@@ -1,19 +1,18 @@
 <?php
-    include "conectar.php";
+    include ("conectar.php");
     $con = conectar();
 
-    $consulta = "SELECT * FROM usuario ";
-    $lConsulta = mysqli_query($con,$consulta) or die (mysqli_error());
-
-    foreach ($lConsulta as $valores) {
-
-      if($_POST['usuario'] == "$valores[nombreUsuario]" && $_POST['contrasenia'] == "$valores[contraUsuario]") {       
-        
-        echo "Sesion iniciada";
-      }
-      else {
-          echo "contra incorrecta";
-      }
+    session_start();
+    
+    $consulta = "SELECT mensaje FROM chat2 order by idMensaje desc ";
+    
+    $rconsulta = mysqli_query($con,$consulta) or die (mysql_error());
+    
+    foreach($rconsulta as  $valores) {
+        echo $_SESSION['sesion1'] . " : " . "$valores[mensaje] <br>";
     }
 
+    header("refresh:3 ; consultar.php");
+
 ?>
+

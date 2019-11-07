@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.inicio {
+    background-color: blue;
+    width: 320px;
+    height: 340px;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+}
+form {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+label {
+    margin: 10px auto;
+    font-size: 20px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
